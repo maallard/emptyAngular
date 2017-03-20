@@ -1,0 +1,31 @@
+<div>
+    <h3>Liste de noms</h3>
+
+    <form class="form" ng-submit="addPerson()">
+        <label for="firstname">Prénom</label>
+        <input required ng-model="form.firstname" type="text" name="firstname" /><br>
+        <label for="lastname">Nom</label>
+        <input required ng-model="form.lastname" type="text" name="lastname"/><br>
+        <label for="email">Email</label>
+        <input required ng-model="form.email" type="email" name="email"/><br>
+
+        <button type="submit">Ajouter</button>
+    </form>
+
+    <table ng-show="persons.length > 0">
+        <thead>
+            <tr>
+                <th>Prénoms</th>
+                <th>Noms</th>
+                <th>Emails</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="person in persons">
+                <td>{{ person.firstname }}</td>
+                <td>{{ person.lastname }}</td>
+                <td>{{ person.email }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
