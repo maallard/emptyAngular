@@ -9,6 +9,10 @@ angular.module('app')
         };
 
         $scope.addPerson = function() {
-            $scope.persons.push($scope.form);
+            $scope.persons.push({
+                firstname: $scope.form.firstname,
+                lastname: $scope.form.lastname,
+                email: $scope.form.email
+            });
         };
     });
